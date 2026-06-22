@@ -177,6 +177,56 @@ body {
 }
 .drawing svg { width: 100%; height: auto; }
 .drawing.small { flex: 0 0 140px; margin: 0 auto; }
+
+/* VENUE (église) */
+.venue-section { display: flex; flex-direction: column; align-items: center; }
+.venue-title {
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.venue-kicker {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 36px;
+}
+.venue-drawing {
+  width: 280px;
+  max-width: 100%;
+  margin-bottom: 30px;
+}
+.venue-drawing img { width: 100%; height: auto; display: block; }
+.venue-time {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+.venue-address {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  margin-bottom: 26px;
+}
+.maps-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 12px 26px;
+  transition: background 0.2s, color 0.2s;
+}
+.maps-btn svg { width: 16px; height: 16px; }
+.maps-btn:hover { background: var(--ink); color: var(--cream); }
 .drawing.chateau { flex: 0 0 420px; }
 @media (max-width: 800px) {
   .drawing.chateau { flex: 0 0 100%; }
