@@ -67,7 +67,8 @@ body {
   justify-content: center;
   text-align: center;
   padding: 60px 24px;
-  background: linear-gradient(180deg, var(--cream) 0%, var(--cream-alt) 100%);
+  background: var(--cream);
+  border-bottom: 1px solid var(--gold);
 }
 .hero-title {
   font-family: var(--serif);
@@ -148,7 +149,7 @@ body {
   margin: 0 auto;
   text-align: center;
 }
-.section.alt { background: var(--cream-alt); max-width: 100%; }
+.section.alt { background: var(--cream); max-width: 100%; }
 .section.alt > * { max-width: 1000px; margin-left: auto; margin-right: auto; }
 
 .section-kicker {
