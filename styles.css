@@ -142,6 +142,13 @@ body {
   height: 14px;
 }
 
+.section-divider {
+  border: none;
+  border-top: 1px solid var(--gold);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 /* SECTIONS */
 .section {
   padding: 90px 24px;
