@@ -1,0 +1,294 @@
+:root {
+  --cream: #f5f8f8;
+  --cream-alt: #e3edec;
+  --gold: #0f5c5c;
+  --gold-dark: #0a3d3d;
+  --ink: #16302f;
+  --ink-soft: #4c6766;
+  --serif: 'Cormorant Garamond', serif;
+  --sans: 'Montserrat', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.6;
+}
+
+/* NAV */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(250, 246, 239, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--cream-alt);
+}
+.nav-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+}
+.nav-logo {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  letter-spacing: 0.1em;
+  color: var(--gold-dark);
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--gold-dark); }
+
+/* HERO */
+.hero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 24px;
+  background: linear-gradient(180deg, var(--cream) 0%, var(--cream-alt) 100%);
+}
+.hero-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.25;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero-name {
+  font-size: clamp(2.6rem, 8vw, 4.6rem);
+  letter-spacing: 0.12em;
+}
+.hero-title .amp {
+  font-style: italic;
+  font-size: 1.6rem;
+  color: var(--gold);
+  margin: 6px 0;
+}
+.hero-divider {
+  width: 1px;
+  height: 60px;
+  background: var(--gold);
+  margin: 36px 0 28px;
+}
+.hero-date {
+  font-family: var(--serif);
+  font-size: 0.95rem;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  margin-bottom: 34px;
+}
+.hero-btn {
+  display: inline-block;
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 12px 28px;
+  margin-bottom: 70px;
+  transition: background 0.2s, color 0.2s;
+}
+.hero-btn:hover {
+  background: var(--ink);
+  color: var(--cream);
+}
+.hero-more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+.hero-more svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* SECTIONS */
+.section {
+  padding: 90px 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+.section.alt { background: var(--cream-alt); max-width: 100%; }
+.section.alt > * { max-width: 1000px; margin-left: auto; margin-right: auto; }
+
+.section-kicker {
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 10px;
+}
+.section-title {
+  font-family: var(--serif);
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+.section-intro {
+  color: var(--ink-soft);
+  max-width: 560px;
+  margin: -20px auto 50px;
+  font-size: 0.95rem;
+}
+
+/* CARD SINGLE (église / réception) */
+.card-single {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  text-align: left;
+}
+.card-single.reverse { flex-direction: row-reverse; }
+.drawing {
+  flex: 0 0 220px;
+  color: var(--gold-dark);
+}
+.drawing svg { width: 100%; height: auto; }
+.drawing.small { flex: 0 0 140px; margin: 0 auto; }
+
+.info-block h3 {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+.info-block .address {
+  color: var(--ink-soft);
+  margin-bottom: 8px;
+}
+.info-block .time {
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+}
+.maps-link {
+  display: inline-block;
+  color: var(--gold-dark);
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 2px;
+}
+.maps-link:hover { color: var(--ink); border-color: var(--ink); }
+
+/* HOTELS */
+.hotel-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  text-align: left;
+}
+.hotel-card {
+  display: block;
+  background: #fff;
+  border: 1px solid var(--cream-alt);
+  border-radius: 4px;
+  padding: 28px 22px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+.hotel-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(138, 109, 44, 0.12);
+  border-color: var(--gold);
+}
+.hotel-icon { font-size: 1.6rem; }
+.hotel-card h4 {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  margin: 10px 0 6px;
+}
+.hotel-card p {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin-bottom: 14px;
+}
+.hotel-link {
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  color: var(--gold-dark);
+}
+
+/* GIFT */
+.gift-block {
+  max-width: 540px;
+  margin: 0 auto;
+  text-align: center;
+}
+.gift-text {
+  color: var(--ink-soft);
+  margin: 24px 0 28px;
+}
+.cta-btn {
+  display: inline-block;
+  background: var(--gold-dark);
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 36px;
+  border-radius: 2px;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: background 0.2s;
+}
+.cta-btn:hover { background: var(--ink); }
+.gift-note {
+  margin-top: 14px;
+  font-size: 0.78rem;
+  color: #a39a86;
+  font-style: italic;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 40px 24px;
+  font-family: var(--serif);
+  color: var(--ink-soft);
+  letter-spacing: 0.05em;
+}
+
+/* RESPONSIVE */
+@media (max-width: 800px) {
+  .nav-links { gap: 16px; }
+  .nav-links a { font-size: 0.7rem; }
+  .card-single, .card-single.reverse {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  .info-block { text-align: center; }
+  .hotel-grid { grid-template-columns: 1fr; }
+}
