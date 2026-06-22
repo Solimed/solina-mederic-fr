@@ -177,6 +177,10 @@ body {
 }
 .drawing svg { width: 100%; height: auto; }
 .drawing.small { flex: 0 0 140px; margin: 0 auto; }
+.drawing.chateau { flex: 0 0 420px; }
+@media (max-width: 800px) {
+  .drawing.chateau { flex: 0 0 100%; }
+}
 
 .info-block h3 {
   font-family: var(--serif);
