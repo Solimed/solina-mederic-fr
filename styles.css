@@ -97,14 +97,14 @@ body {
 }
 .hero-date {
   font-family: var(--serif);
-  font-size: 0.95rem;
-  letter-spacing: 0.3em;
+  font-size: 0.85rem;
+  letter-spacing: 0.25em;
   color: var(--gold);
   margin-bottom: 14px;
 }
 .hero-dress {
   font-family: var(--serif);
-  font-size: 1.1rem;
+  font-size: 1.7rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--ink);
