@@ -89,11 +89,37 @@ body {
   color: var(--gold);
   margin: 6px 0;
 }
-.hero-divider {
-  width: 1px;
-  height: 60px;
-  background: var(--gold);
-  margin: 36px 0 28px;
+.hero-title-inline {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.hero-title-inline .amp {
+  margin: 0;
+}
+.hero-photo {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  margin: 40px 0 32px;
+  padding: 6px;
+  border: 1px solid var(--gold);
+  position: relative;
+}
+.hero-photo::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+}
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
 }
 .hero-date {
   font-family: var(--serif);
